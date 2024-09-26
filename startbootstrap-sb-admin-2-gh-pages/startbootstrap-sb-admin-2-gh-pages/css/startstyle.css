@@ -22,7 +22,7 @@ body, html {
 
 /* 반투명 상자를 화면 전체에 맞춤 */
 .overlay {
-    background-color: rgba(44, 52, 44, 0.5); /* 반투명 배경 */
+    background-color: rgba(0, 0, 0, 0.28); /* 반투명 배경 */
     width: 100vw;
     height: 100vh;
     position: absolute;
