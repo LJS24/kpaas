@@ -20,12 +20,45 @@
     <!-- 중앙 정렬을 위한 CSS 스타일 -->
     <style>
         body {
-            background-color: #68f6c4;
+            background: url('img/non-5.png')no-repeat bottom center/cover; !important;
+            position: relative;
             display: flex;
-            justify-content: center; /* 수평 중앙 정렬 */
-            align-items: center; /* 수직 중앙 정렬 */
-            height: 100vh; /* 화면 전체 높이를 채움 */
-            margin: 0; /* 기본 마진 제거 */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8) !important; /* 반투명 효과 */
+            position: relative;
+            z-index: 1; /* 카드가 로고 뒤에 오도록 설정 */
+        }
+
+        .logo-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px; /* 로고 크기 */
+            height: 90px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #28343f; /* 로고 배경 */
+            z-index: 2; /* 로고가 카드 위에 오도록 설정 */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding-top: 60px; /* 카드 내용이 로고와 겹치지 않도록 패딩 추가 */
         }
 
         .container {
@@ -33,17 +66,15 @@
             width: 100%; /* 반응형 너비 설정 */
             padding: 20px;
         }
-
-        .card {
-            width: 100%;
-            margin: auto; /* 카드가 컨테이너 안에서 중앙에 위치 */
-        }
     </style>
 </head>
 
 <body>
 
 <div class="container">
+    <div class="logo-container">
+        <img src="img/logo1roatate.png" alt="Logo"> <!-- 로고 이미지 경로 설정 -->
+    </div>
     <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-5">
             <div class="text-center">
