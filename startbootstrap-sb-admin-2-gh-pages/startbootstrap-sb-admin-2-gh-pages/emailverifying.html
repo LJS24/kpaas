@@ -69,6 +69,24 @@
             padding: 20px;
         }
 
+        .form-control-user {
+            height: calc(1.5em + .75rem + 2px); /* 세로 높이 조정 */
+            width: calc(100%); /* 가로 길이 조정, 비율 유지 */
+            margin: 0 auto; /* 가운데 정렬 */
+        }
+
+        .btn-user {
+            width: calc(50%); /* 버튼의 가로 길이를 입력 필드와 동일하게 조정 */
+            height: calc(3.0em + .75rem + 2px); /* 세로 높이 조정 */
+            margin: 0 auto; /* 가운데 정렬 */
+            display: flex; /* flexbox 사용 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+        }
+
+        .form-group {
+            margin-bottom: 0.75rem; /* 세로 공간 조정 */
+        }
 
     </style>
 </head>
@@ -89,20 +107,23 @@
                             <h1 class="h4 text-gray-900 mb-4">메일 주소 확인</h1>
                             <p class="mb-4">메일 주소로 전송된 인증 코드를 입력하십시오.</p>
                         </div>
+                        <br>
                         <form class="user">
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputCode" placeholder="인증 코드 입력">
                             </div>
-                            <a href="emailveryfied.html".html" class="btn btn-primary btn-user btn-block">
+                            <br>
+                            <a href="emailveryfied.html" class="btn btn-primary btn-user btn-block">
                                 계정 확인
                             </a>
-                            <hr>
+
                             <a href="#" id="resendButton" class="btn btn-secondary btn-user btn-block" onclick="resendCode()">
                                 인증 코드 재전송
                             </a>
+                            <br>
                             <p id="resendMessage" class="text-success text-center mt-3" style="display:none;">인증 코드가 재전송 되었습니다!</p>
                         </form>
-                        <hr>
+
                         <div class="text-center">
                             <a class="small" href="login.html">이미 인증되었다면 로그인 화면으로!</a>
                         </div>
@@ -120,8 +141,7 @@
 <!-- Core plugin JavaScript-->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+
 
 <script>
     // 인증 코드 재전송 함수
